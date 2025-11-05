@@ -3,11 +3,30 @@ import { test, expect } from '@playwright/test';
 import { MainPage } from '../pages/main-page';
 
 
-test.skip('login as admin', async ({ page }) => {
-  // await page.getByTestId('login-username').fill(process.env.ADMIN_LOGIN);
-  // await page.getByTestId('login-password').fill(process.env.ADMIN_PASSWORD);
-  // await page.getByTestId('login-button').click();
-  // await expect(page.getByTestId('welcome-msg')).toContainText(`Witaj: ${process.env.ADMIN_LOGIN}`)
+test('simple get request', async ({ request }) => {
+
+  const response = await request.get('/api/index.php?endpoint=products');
+
+  expect(await response.status()).toBe(200);
+  console.log(await response.text());
+  expect(await response.text()).toContain('Mysz Gamingowa');
+
 });
+
+test('simple post request', async ({ request }) => {
+
+  const response = await request.post('/api/index.php?endpoint=products', {
+    data: {
+      "name": "testowy produkt",
+      "price": "123.44",
+      "currency": "PLN"
+    }
+  });
+
+  expect(await response.status()).toBe(201);
+  console.log(await response.text());
+  expect(await response.text()).toContain('testowy produkt');
+
+})
 
 
