@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Miecz Runiczny",
+    "id": "p1",
+    "price": "199.99 zł"
+  },
+  {
+    "name": "Eliksir Energii",
+    "id": "p2",
+    "price": "39.99 zł"
+  },
+  {
+    "name": "Peleryna Maskująca",
+    "id": "p3",
+    "price": "349.00 zł"
+  },
+  {
+    "name": "Mysz Gamingowa",
+    "id": "p4",
+    "price": "129.00 zł"
+  },
+  {
+    "name": "Klawiatura Mechaniczna",
+    "id": "p5",
+    "price": "289.00 zł"
+  },
+  {
+    "name": "Słuchawki Studyjne",
+    "id": "p6",
+    "price": "459.00 zł"
+  },
+  {
+    "name": "Notes QA",
+    "id": "p7",
+    "price": "24.99 zł"
+  },
+  {
+    "name": "Kubek Debuggera",
+    "id": "p8",
+    "price": "49.00 zł"
+  }
+]
